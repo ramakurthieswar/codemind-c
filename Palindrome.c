@@ -1,24 +1,21 @@
 #include<stdio.h>
-int pali(int a){
-	int r,re=0,org=a;
-	while(a!=0){
-		r=a%10;
-		re=re*10+r;
-		a/=10;
-	}
-	if(org==re){
-		return 1;
-	}
-	else{
-		return 0;
-	}
-}
-int main(){
-    int a;
-    scanf("%d",&a);
-    if(pali(a)){
-        printf("True");}
-        else{
-        printf("False");
+int main()
+{
+    int n,rev=0,i,t,r;
+    scanf("%d",&n);
+    t=n;
+    while(n>0)
+    {
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+    if(t==rev)
+    {
+        printf("Palindrome");
+    }
+    else
+    {
+        printf("Not Palindrome");
 }
 }
